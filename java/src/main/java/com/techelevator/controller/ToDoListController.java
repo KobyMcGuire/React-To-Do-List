@@ -19,8 +19,18 @@ public class ToDoListController {
         return toDoListDao.fetchToDoLists();
     }
 
+    @RequestMapping(path="/toDoLists", method = RequestMethod.POST)
+    public ToDoList createToDoList(@RequestBody ToDoList toDoList) {
+        return toDoListDao.createToDoList(toDoList);
+    }
+
+    @RequestMapping(path = "/toDoLists", method = RequestMethod.PUT)
+    public ToDoList updateToDoList(@RequestBody ToDoList toDoList) {
+        return toDoListDao.updateToDoList(toDoList);
+    }
+
     @RequestMapping(path="/toDoLists/{id}", method = RequestMethod.GET)
     public ToDoList fetchToDoListById(@PathVariable int id) {
-
+        return null;
     }
 }

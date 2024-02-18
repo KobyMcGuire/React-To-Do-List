@@ -8,8 +8,7 @@ public interface ToDoListDao {
 
     List<ToDoList> fetchToDoLists();
 
-    ToDoList fetchToDoList(int id);
+    ToDoList createToDoList(ToDoList toDoList);
 
-
-
+    ToDoList updateToDoList(ToDoList toDoList);
 }
