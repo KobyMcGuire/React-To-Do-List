@@ -68,11 +68,6 @@ public class JdbcToDoListDao implements ToDoListDao {
         return toDoList;
     }
 
-    @Override
-    public ToDoList fetchToDoList(int id) {
-        return null;
-    }
-
 
     private ToDoList mapRowToList(SqlRowSet row) {
         ToDoList list = new ToDoList();
