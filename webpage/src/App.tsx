@@ -7,7 +7,9 @@ function App() {
 
   return (
     <>
-      <ToDoListContainer></ToDoListContainer>
+      <div className="container">
+        <ToDoListContainer />
+      </div>
     </>
   );
 }

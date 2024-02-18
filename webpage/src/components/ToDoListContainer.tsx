@@ -27,10 +27,12 @@ export const ToDoListContainer = () => {
 
   return (
     <>
-      <h1>ToDoListContainer</h1>
-      <ul>
+      <h1 className="text-center">To-Do List</h1>
+      <ul className="list-group">
         {toDoLists.map((toDoList) => (
-          <li key={toDoList.id}>{toDoList.title}</li>
+          <li className="list-group-item" key={toDoList.id}>
+            {toDoList.title}
+          </li>
         ))}
       </ul>
     </>
