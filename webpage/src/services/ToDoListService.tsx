@@ -7,7 +7,14 @@ const http = axios.create({
 interface ToDoList {
   id: number;
   title: string;
-  description: string;
+  description?: string;
+}
+
+interface ToDoItem {
+  id: number;
+  listId: number;
+  title: string;
+  description?: string;
 }
 
 export default {
@@ -21,5 +28,9 @@ export default {
 
   updateToDoList(toDoList: ToDoList) {
     return http.put("/toDoLists", toDoList);
+  },
+
+  getToDoItems(id: number) {
+    return http.get(`/toDoItems/${id}`);
   },
 };
